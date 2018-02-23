@@ -70,7 +70,7 @@ $(document).ready(function() {
       var widget = uploadcare.Widget('[role=uploadcare-uploader]');
       widget.onUploadComplete(function(info) {
         var pregunta = 'pregunta';
-        var urlVideo = info.cdnUrl + 'nth/0/';
+        var urlVideo = info.cdnUrl + 'record.webm';
         firebase.database().ref('users').child(user.uid).child('post').push({
           pregunta: pregunta,
           url: urlVideo
